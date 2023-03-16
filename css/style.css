@@ -1,0 +1,613 @@
+ /* General CSS */
+ @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+
+ *,
+ *::before,
+ *::after {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     outline: none;
+ }
+
+ :root {
+
+     /* Background Color */
+     --bg-white: #fffffa;
+     --bg-blue: #102542;
+
+     /* Text Colors */
+     --primary-text: #102542;
+     --dark-color: #0e499d;
+     --text-white: #fffffa;
+     --red: #ff0000;
+
+     /* Font Family */
+     --primary-font: 'Barlow Condensed', sans-serif;
+ }
+
+ body,
+ html {
+     color: var(--primary-text);
+     font-size: 10px;
+     font-weight: 400;
+     font-family: var(--primary-font);
+     scroll-behavior: smooth;
+     line-height: 1.5;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+     margin: 0;
+ }
+
+ h1 {
+     font-size: 9rem;
+     line-height: 1.4;
+     font-weight: 600;
+ }
+
+ h2 {
+     font-size: 4.7rem;
+     font-weight: 600;
+     display: inline-block;
+     text-transform: capitalize;
+     line-height: 1.2;
+     margin-bottom: 2rem;
+     padding: 2rem;
+ }
+
+ h3 {
+     font-size: 3.1rem;
+     line-height: 1.2;
+     font-weight: 700;
+ }
+
+ h4 {
+     font-size: 2.5rem;
+     font-weight: 700;
+     line-height: 1;
+ }
+
+ h5 {
+     font-size: 1.8rem;
+     font-weight: 600;
+     line-height: 1;
+ }
+
+ p {
+     font-size: 2rem;
+     font-weight: 500;
+     line-height: 1.6;
+     margin-top: 1rem;
+     padding: 2rem;
+     font-family: var(--primary-font);
+ }
+
+ embed,
+ iframe,
+ img,
+ object {
+     max-width: 100%;
+ }
+
+ ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ a,
+ a:active,
+ a:focus,
+ a:hover,
+ button {
+     text-decoration: none;
+     outline: 0;
+ }
+
+ a:hover,
+ button:hover {
+     -webkit-transition: all 0.3s ease-in;
+     -o-transition: all 0.3s ease-in;
+     -moz-transition: all 0.3s ease-in;
+     transition: all 0.3s ease-in;
+ }
+
+ .main-btn {
+     position: relative;
+     color: var(--bg-white);
+     background: linear-gradient(to right, #102542, #0e499d);
+     overflow: hidden;
+     border: 0.2rem solid var(--bg-white);
+     border-radius: 3.5rem;
+     text-transform: uppercase;
+     padding: 1rem 3.5rem;
+     font-weight: 600;
+     font-size: 1.8rem;
+     margin-top: 1.5rem;
+     letter-spacing: 0.2rem;
+ }
+
+ .main-btn:hover {
+     background: var(--bg-white);
+     color: var(--primary-text);
+     border: 0.2rem solid var(--primary-text);
+ }
+
+ /* ===========================
+Homepage Page CSS
+============================== */
+
+ .parent {
+     position: relative;
+ }
+
+ .child1 {
+     position: absolute;
+     z-index: 1;
+ }
+
+ .child2 {
+     position: absolute;
+ }
+
+ .navig_homepg_header {
+     background: url('../images/header4.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     width: 100%;
+     transition: 0.2s;
+     position: fixed;
+     top: 0;
+ }
+
+ .name_img {
+     height: 9rem;
+ }
+
+ .navi-toggle-sign .logo-cl {
+     height: 7rem;
+ }
+
+ .navi-toggle-sign {
+     text-align: center;
+ }
+
+ .contact-nav-div {
+     color: var(--text-white);
+     font-size: 2rem;
+     font-weight: 600;
+     font-family: var(--primary-font);
+     transition: 0.1 all ease-in;
+ }
+
+ .contact-nav,
+ .career-nav {
+     color: var(--text-white);
+     font-size: 2.3rem;
+ }
+
+ .contact-nav:hover,
+ .career-nav:hover {
+     color: var(--red);
+     font-size: 2.2rem;
+ }
+
+ .nav_btn {
+     border: none;
+     background-color: #01497c;
+     color: var(--bg-white);
+     font-size: 2.5rem;
+ }
+
+ .offcanvas-header .custom-nav-btn {
+     color: var(--text-white);
+     font-size: 3rem;
+ }
+
+ .navigate_part {
+     text-align: right;
+     background: url('../images/nav-sect.jpg');
+     font-size: 3.5rem;
+     font-weight: 450;
+     font-family: var(--primary-font);
+     line-height: 5rem;
+ }
+
+ .navigate_part li a {
+     color: var(--text-white);
+ }
+
+ .navigate_part .nav-link:hover {
+     font-size: 3rem;
+     color: #f87060;
+     font-weight: 500;
+ }
+
+ .navigate_part .custom-nav-btn {
+     background-color: white !important;
+     font-size: 2rem;
+     font-weight: 600;
+ }
+
+ /* ===========================
+Slider Section CSS
+============================== */
+
+ .myslider {
+     height: 600px;
+ }
+
+ .slider_image {
+     height: 600px;
+     background-size: cover;
+ }
+
+ .slider_text {
+     position: absolute;
+     top: 30%;
+     left: 30%;
+     right: 30%;
+     bottom: 40%;
+     background-color: rgba(0, 0, 0, 0.7);
+     color: var(--text-white);
+     justify-content: center;
+     align-items: center;
+     height: 35rem;
+     padding: 5rem;
+ }
+
+ .slider_text_phn {
+     visibility: hidden;
+     display: none;
+     text-align: center;
+     padding: 2rem;
+     background-color: rgba(0, 0, 0, 0.7);
+     color: var(--text-white);
+ }
+
+ .slider_text:hover {
+     border: 0.25rem solid #f87060;
+ }
+
+ /* ===========================
+About Section CSS
+============================== */
+ .all_about_who,
+ .all_about_what {
+     color: #102542;
+     padding: 8rem;
+     text-align: justify;
+     text-justify: inter-word;
+ }
+
+ .all_about_what {
+     background-color: #cdd7d6;
+ }
+
+ .all_about_who {
+     background-color: #58a4b0;
+ }
+
+ /* ===========================
+Dictum Section CSS
+============================== */
+ .landing_dictum_section {
+     justify-content: center;
+     align-items: center;
+     background: url('../images/dictum-sect1.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ .flip-card {
+     background-color: transparent;
+     width: 300px;
+     height: 300px;
+     perspective: 1000px;
+     margin: 6.5rem;
+     font-family: var(--primary-font);
+ }
+
+ .flip-card-inner {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     justify-content: center;
+     transition: transform 0.6s;
+     transform-style: preserve-3d;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ .flip-card:hover .flip-card-inner {
+     transform: rotateY(180deg);
+ }
+
+ .flip-card-front,
+ .flip-card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+     text-align: center;
+     justify-content: center;
+     padding: 60px 0;
+ }
+
+ .flip-card-front {
+     background-color: var(--bg-blue);
+     color: rgb(224, 223, 223);
+ }
+
+ .dictum_icon {
+     font-size: 7rem;
+     display: block;
+ }
+
+ .flip-card-back {
+     background-color: var(--bg-blue);
+     color: rgb(224, 223, 223);
+     transform: rotateY(180deg);
+ }
+
+ /* ===========================
+Perusal Section CSS
+============================== */
+ .parallax_counter {
+     /* The image used */
+     background-image: url('../images/parallax.jpg');
+
+     /* Set a specific height */
+     min-height: 500px;
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ .counter_addon_span {
+     font-size: 5rem;
+     font-weight: 600;
+ }
+
+ .counter-box {
+     background-color: #cdd7d6;
+     padding: 30px 0;
+     width: 100%;
+     margin-top: 30%;
+     border-radius: 30px;
+     font-family: var(--primary-font);
+     color: var(--primary-text);
+     text-align: center;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ /* ===========================
+Partners Section CSS
+============================== */
+ .partner_head {
+     font-size: 5rem;
+     font-weight: 600;
+ }
+
+ .box {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+     grid-gap: 15px;
+     margin: 0 auto;
+ }
+
+ .card {
+     position: relative;
+     width: 300px;
+     height: 350px;
+     background: var(--primary-text);
+     margin: 0 auto;
+     border-radius: 4px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+ }
+
+ .card:before,
+ .card:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 4px;
+     background: var(--primary-text);
+     transition: 0.5s;
+     z-index: -1;
+ }
+
+ .card:hover:before {
+     transform: rotate(20deg);
+     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+ }
+
+ .card:hover:after {
+     transform: rotate(10deg);
+     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+ }
+
+ .card .imgBx {
+     position: absolute;
+     top: 10px;
+     left: 10px;
+     bottom: 10px;
+     right: 10px;
+     background: #102542;
+     transition: 0.5s;
+ }
+
+ .card:hover .imgBx {
+     bottom: 80px;
+ }
+
+ .card .imgBx img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .card .details {
+     position: absolute;
+     left: 10px;
+     right: 10px;
+     bottom: 10px;
+     height: 60px;
+     text-align: center;
+ }
+
+ .card .details h2 {
+     font-weight: 600;
+     font-size: 20px;
+     color: var(--text-white);
+     width: 100%;
+     background-color: var(--primary-text);
+     text-transform: uppercase;
+ }
+
+ /* ===========================
+Perusal Section CSS
+============================== */
+ .parallax_counter2 {
+     /* The image used */
+     background-image: url('../images/team-hom.jpg');
+
+     /* Set a specific height */
+     min-height: 300px;
+
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
+ /* ===========================
+Footer Section CSS
+============================== */
+
+ .landing_footer_section {
+     background-image: url('../images/parallax1.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 10rem;
+     padding-bottom: 0rem;
+ }
+
+ .footer_section_content h4 {
+     padding: 1rem 0;
+ }
+
+ .footer_section_content .link-widget a {
+     color: var(--primary-text);
+     font-size: 1.8rem;
+     font-weight: 500;
+     -webkit-transition: all 0.3s ease-out 0s;
+     transition: all 0.3s ease-out 0s;
+ }
+
+ .footer_section_content .link-widget a:hover {
+     color: var(--red);
+     font-size: 2rem;
+ }
+
+ .footer_section_content .social-network .fab {
+     color: var(--text-white);
+     background-color: var(--primary-text);
+     font-size: 1.8rem;
+     font-weight: 500;
+     padding: 1rem;
+     margin: .5rem;
+     border-radius: 50%;
+ }
+
+ .footer_section_content .social-network .fab:hover {
+     color: var(--primary-text);
+     background-color: var(--text-white);
+ }
+
+ .landing_footer_section .copyright-section {
+     text-align: center;
+     font-size: 1.5rem;
+     margin-top: 5rem;
+     background-color: rgb(224, 223, 223);
+ }
+
+ .landing_footer_section .copyright-section p {
+     margin-top: 0;
+     padding: 2rem 0;
+     line-height: 0;
+ }
+
+ .landing_footer_section .copyright-section a {
+     color: var(--primary-text);
+     font-weight: 600;
+ }
+
+
+ /* ===========================
+Disclaimer Section CSS
+============================== */
+#custom-alert {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .alert-container {
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    margin: 10% auto;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .alert-header {
+    padding: 10px;
+    background-color: #102542;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .alert-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .alert-message {
+    padding: 20px;
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  .alert-buttons {
+    padding: 10px;
+    text-align: right;
+  }

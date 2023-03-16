@@ -1,0 +1,156 @@
+@media screen and (max-width:3000px) {
+    .navig_homepg_header {
+        visibility: hidden;
+        display: none;
+    }
+
+    .contact_us .LeftSideBar .navig_homepg_header,
+    .view_btn {
+
+        visibility: hidden;
+    }
+
+}
+
+/* Media Query 1170px */
+
+@media screen and (max-width:1170px) {
+
+    /* General CSS */
+    .section-subtitle {
+        max-width: 60%;
+    }
+
+    /* 01 Navbar CSS */
+    .contact_us .LeftSideBar .navig_homepg_header,
+    .services .LeftSideBar .navig_homepg_header,
+    .phn-services {
+        background-color: var(--primary-text);
+        height: 15rem;
+        visibility: hidden;
+    }
+
+    .LeftSideBar .contact-details {
+        font-size: 5rem;
+        padding-left: 2rem;
+        position: fixed;
+
+    }
+
+    .LeftSideBar .sub-contact-details {
+        font-size: 3rem;
+        padding-left: 10rem;
+    }
+
+}
+
+
+/* Media Query 991px */
+@media screen and (max-width:992px) {
+
+    /* 01 Navbar CSS */
+    .navig_homepg_header {
+        visibility: visible;
+        display: flex;
+        position: fixed;
+        height: 9rem;
+    }
+    .navi-toggle-sign {
+        visibility: inherit;
+        position: absolute;
+        top: 0.8rem;
+        right: 2.5rem;
+
+    }
+
+    .name_img {
+        height: 1rem;
+        margin-left: 3rem;
+    }
+
+    .LeftSideBar {
+        visibility: hidden;
+        display: none;
+
+    }
+
+    .LeftSideBar .contact-details,
+    .LeftSideBar .services-details {
+        padding-top: 2.6rem;
+        position: fixed;
+        padding-left: 43rem;
+        visibility: hidden;
+    }
+
+    .LeftSideBar .sub-contact-details,
+    .LeftSideBar .sub-services-details,
+    .about-us .about,
+    .sub-services-heading,
+    .top-services-heading,
+    .LeftSideBar .services-content .services-details,
+    .contact-nav,
+    .career-nav,
+    .fa-trophy,
+    .top-heading,
+    .about {
+        visibility: hidden;
+    }
+
+    .offcanvas-header .custom-nav-btn {
+        color: var(--text-white);
+        font-size: 3rem;
+    }
+
+    .view_btn {
+        visibility: visible;
+    }
+
+    .container-ot {
+        width: 60%;
+    }
+
+    .RightSideBar {
+        padding-top: 3.5rem;
+    }
+    .founder_res{
+        text-align: center;
+    }
+}
+
+/* Media Query 767px */
+@media screen and (max-width:767px) {
+
+    /* General CSS */
+    body,
+    html {
+        font-size: 8px;
+    }
+
+    .section-subtitle {
+        max-width: 80%;
+    }
+
+    .landing_services_section .LeftSideBar {
+        visibility: hidden;
+    }
+
+    .container-ot {
+        width: 50%;
+    }
+    .name_img,
+    .navi-toggle-sign .logo-cl {
+        margin-top: -0.5rem;
+        height: 4rem;
+    }
+}
+
+/* Media Query 590px */
+@media screen and (max-width:590px) {
+
+    /* General CSS */
+    body,
+    html {
+        font-size: 7px;
+    }
+
+}

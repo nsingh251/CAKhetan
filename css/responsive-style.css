@@ -1,0 +1,150 @@
+/* Media Query 1399px */
+@media (max-width:1399px){
+
+    /* General CSS */
+    .flip-card{
+        display: inline;
+        margin:4rem;
+    }
+    .slider_text_phn{
+        visibility: hidden;
+        display: none;
+    }
+
+    /* 01 Navbar CSS */
+
+    /* 02 Banner Section */
+}
+
+/* Media Query 1170px */
+@media (max-width:1200px){
+
+    /* General CSS */
+    .flip-card{
+        display: inline;
+        margin:1rem;
+    }
+    .slider_text_phn{
+        visibility: hidden;
+        display: none;
+    }
+
+    /* 01 Navbar CSS */
+
+    /* 02 Banner Section */
+}
+
+/* Media Query 991px */
+@media (max-width:992px) {
+
+    /* 01 Navbar CSS */
+    .contact-nav-div{
+        visibility: hidden;
+    }
+
+    .slider_text_phn{
+        visibility: hidden;
+        display: none;
+    }
+    .navi-toggle-sign{
+        visibility: inherit;
+        position: absolute;
+        top:0.8rem;
+        right:2.5rem;
+        
+    }
+    .name_img{
+        height:9rem;
+        position: absolute;
+        top: 2.5rem;
+    }
+    /* General CSS */
+    
+   
+}
+
+/* Media Query 767px */
+@media (max-width:767px) {
+
+    /* General CSS */
+    body,
+    html {
+        font-size: 8px;
+    }
+    .contact-nav-div{
+        visibility: hidden;
+    }
+    .navi-toggle-sign{
+        position: absolute;
+        top:1.5rem;
+        right:2rem;
+    }
+    .name_img{
+        height:9rem;
+        position: absolute;
+        top: 3.5rem;
+    }
+
+    /*Dictum Section CSS*/
+     .flip-card{
+        display: block;
+    }
+
+    .slider_text_phn{
+        visibility: visible;
+        display:block;
+        position: absolute;
+        top:30rem;
+        left:10rem;
+        right:10rem;
+    }
+
+}
+
+/* Media Query 590px */
+@media (max-width:590px) {
+
+    /* General CSS */
+    body,
+    html {
+        font-size: 7px;
+    }
+    .contact-nav-div{
+        visibility: hidden;
+    }
+    .navi-toggle-sign{
+        position: absolute;
+        top:2.5rem;
+        right:2rem;
+    }
+    .logo-cl{
+        visibility: hidden;
+    }
+    .name_img{
+        height:10rem;
+        position: absolute;
+        top: 3.5rem;
+    }
+
+    .slider_text_phn{
+        visibility: visible;
+        display:block;
+        position: absolute;
+        top:30rem;
+        left:10rem;
+        right:10rem
+    }
+    /*Dictum Section CSS*/
+    
+}
+
+@media (max-width:490px) {
+    .slider_text_phn{
+        visibility: visible;
+        display:block;
+        position: absolute;
+        top:30rem;
+        left:5rem;
+        right:5rem;
+    }
+}

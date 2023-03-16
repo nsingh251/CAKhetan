@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style-other.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="images/logo3.png" type="image/icon type">
+  <title>Career</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Font Awesome 5 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body style="background-color: #58a4b0;">
+  <div class="container">
+    <a class="home_back_btn" href="index.html">
+      <h3 class="career-subhead"><i class="fas fa-home home-career-icon"></i>Home</h3>
+    </a>
+    <h1 class="form-title">--APPLY HERE--</h1>
+    <p class="form-para">We nurture and cultivate a sense pride in the work and create team leaders. Your growth chart
+      will be governed by well-defined transparent policies of the firm. Apply via the form given below and meet us for
+      face to face interview.
+    </p>
+    <form>
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter Email" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="PhoneNo">Phone Number</label>
+          <input type="number" id="phoneNo" name="phoneNo" placeholder="Enter Phone Number" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="HQ">Highest Qualification</label>
+          <input type="text" id="qualify" name="qualify" placeholder="Highest-Qualification" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="AP">Applying Position</label>
+          <input type="text" id="apply" name="apply" placeholder="Enter Applying-Position" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="YOF">Year Of Experience</label>
+          <input type="text" id="yoe" name="yoe" placeholder=" Enter Year-Of-Experience" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="YOF">Previous Working Company</label>
+          <input type="text" id="comp" name="comp" placeholder=" Enter Company Name, If Fresher Enter 'NA'" required />
+
+        </div>
+
+        <div class="user-input-box">
+          <label for="Gender">Gender</label>
+          <input type="text" id="gender" name="gender" placeholder=" Enter Gender" required />
+        </div>
+
+        <div class="user-input-box">
+          <label for="homepage">Message</label>
+          <input type="text" id="msg" name="msg" placeholder="Enter Message" required>
+          <p class="form-para">Write any Question, Message or Reference.</p>
+        </div>
+
+        <div class="user-input-box">
+          <label for="homepage">Upload Resume Link</label>
+          <input type="text" id="resume" name="resume" placeholder="Enter Resume Drive Link" required>
+          <p class="form-para">Upload your resume on drive and share the link here.</p>
+        </div>
+
+        <div class="form-submit-btn">
+          <button type="button" onclick="sendemail()" class="btn main-btn">APPLY</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+    function validateInputs() {
+      const textFields = ["fullName", "email", "phoneNo", "qualify", "apply", "yoe", "comp", "gender", "msg", "resume"];
+
+      for (let i = 0; i < textFields.length; i++) {
+        const fieldValue = document.getElementById(textFields[i]).value.trim();
+        if (fieldValue === "") {
+          alert(`Please enter a value for ${textFields[i]}.`);
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function sendemail() {
+      if (!validateInputs()) {
+        return;
+      }
+      
+      let name = document.getElementById("fullName").value;
+      let email = document.getElementById("email").value;
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      let phoneNo = document.getElementById("phoneNo").value;
+      let qualify = document.getElementById("qualify").value;
+      let apply = document.getElementById("apply").value;
+      let yoe = document.getElementById("yoe").value;
+      let company = document.getElementById("comp").value;
+      let gender = document.getElementById("gender").value;
+      let msg = document.getElementById("msg").value;
+      let resume = document.getElementById("resume").value;
+
+      let body = "<p>New Job Application Received from website Khetan Rajesh Kumar & Co.</p><br/><table width='100%' cellpadding='10px'><tr><th>Full Name</th><td>" + name + "</td></tr><tr><th>Email ID</th><td>" + email +
+        "</td></tr><tr><th>Phone No.</th><td>" + phoneNo + "</td></tr><tr><th>Highest Qualification</th><td>" + qualify +
+        "</td></tr><tr><th>Applying Position</th><td>" + apply + "</td></tr><tr><th>Year Of Experience</th><td>" + yoe + "</td></tr><tr><th>Previous Working Company</th><td>" + company +
+        "</td></tr><tr><th>Gender</th><td>" + gender + "</td></tr><tr><th>Message</th><td>" + msg + "</td></tr><tr><th>Resume</th><td>" + resume + "</td></tr></table>";
+      //console.log(body);
+
+      Email.send({
+        //SecureToken: "34196ac4-984f-4fc0-9154-5ad76b1ee8a1",
+        Host:"smtp.elasticemail.com",
+        Username: "rajesh.khetan@cakhetan.com",
+        Password: "EA0B017DAC61F3F1F1B67FE8BD991B08BD19",
+        To: 'admin@cakhetan.com', //admin@cakhetan.com
+        From: "rajesh.khetan@cakhetan.com", //krk.patna@gmail.com
+        Subject: "Regarding New Job Application",
+        Body: body
+      }).then(
+        message => alert("Application Sent!")
+      );
+    }
+  </script>
+
+</body>
+
+</html>
